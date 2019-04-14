@@ -554,7 +554,7 @@ const App = connect('languageTools,parses,initialQuery,termResults', actions)(
       <form onSubmit=${onSubmit}>
         ${/* btw, we can't use React's onChange; Preact prefers browser-native onInput
         https://github.com/developit/preact/issues/1034 */''}
-        <textarea class="input" value=${query} onInput=${event => setQuery(event.target.value)} />
+        <textarea rows="4" class="input" value=${query} onInput=${event => setQuery(event.target.value)} />
         <button class="submitter" disabled=${!languageTools}>Analyse Japanese<//>
       <//>
       <div class="paper-tape columnReverse" onClick=${onClick}>
